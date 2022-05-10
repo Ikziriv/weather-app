@@ -1,0 +1,32 @@
+{
+    "name": "weather-app",
+    "version": "1.0.0",
+    "description": "Project challange",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Ikziriv/weather-app.git"
+    },
+    "keywords": [
+        "svelte",
+        "sveltekit",
+        "vite",
+        "tailwindcss",
+        "bootstrap",
+        "html",
+        "css",
+        "javascript"
+    ],
+    "author": "Ikziriv",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Ikziriv/weather-app/issues"
+    },
+    "homepage": "https://github.com/Ikziriv/weather-app#readme",
+    "dependencies": {
+        "svelte": "^3.48.0",
+        "sveltestrap": "^5.9.0"
+    }
+}
