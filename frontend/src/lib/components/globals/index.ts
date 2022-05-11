@@ -1,5 +1,9 @@
 // Header, Footer
 export { default as Header }
-from './Header.svelte'
+from './header/Header.svelte'
+export { default as HeaderMobile }
+from './header/HeaderMobile.svelte'
 export { default as Footer }
-from './Footer.svelte'
+from './footer/Footer.svelte'
+export { default as FooterMobile }
+from './footer/FooterMobile.svelte'

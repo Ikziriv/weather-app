@@ -2,6 +2,7 @@ import { writable, readable  } from 'svelte/store';
 import type { Writable } from 'svelte/store';
 import { writable as lstore } from 'svelte-local-storage-store';
 
+export const searchBar = writable(false);
 export const menuExpanded = writable(false);
 export const pageTransitionDelay = readable(900);
 
