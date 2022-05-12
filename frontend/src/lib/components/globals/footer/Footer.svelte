@@ -1,9 +1,9 @@
 <script lang="ts">
+    import { cssFrame } from "$lib/stores/index";
     import Icon from '@iconify/svelte';
-    export let cssFrame: string;
 </script>
 
-{#if cssFrame == 'tailwindcss'}
+{#if $cssFrame == 'tailwindcss'}
     <footer class="absolute inset-x-0 bottom-0 md:fixed hidden md:block">
         <div class="w-full h-20 justify-between items-center w-full h-auto md:h-20 border-b bg-transparent px-8 md:px-16">
             <div class="flex justify-center md:justify-end items-center md:items-end">
@@ -32,9 +32,5 @@
                 </div>
             </div>
         </div>
-    </footer>
-{:else}
-    <footer class="">
-
     </footer>
 {/if}

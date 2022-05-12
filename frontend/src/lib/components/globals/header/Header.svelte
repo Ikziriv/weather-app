@@ -1,11 +1,10 @@
 <script lang="ts">
-    import { theme, fetchLocation, unit } from "$lib/stores/index";
+    import { theme, cssFrame, fetchLocation, unit } from "$lib/stores/index";
     import { changeTheme } from "$lib/utils/theme";
     import Icon from '@iconify/svelte';
-    export let cssFrame: string;
 </script>
 
-{#if cssFrame == 'tailwindcss'}
+{#if $cssFrame == 'tailwindcss'}
     <header class="absolute inset-x-0 top-0 md:fixed hidden md:block">
         <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 justify-between items-center w-full h-auto md:h-20 bg-transparent py-4 md:py-0 px-8 md:px-16">
             <div class="flex justify-start items-start">
@@ -58,9 +57,5 @@
                 </div>
             </div>
         </div>
-    </header>
-{:else}
-    <header class="">
-
     </header>
 {/if}
