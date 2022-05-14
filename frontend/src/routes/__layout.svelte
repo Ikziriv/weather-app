@@ -8,7 +8,6 @@
 </script>
 
 <script lang="ts">
-    import { Styles } from 'sveltestrap';
     import { Header, HeaderMobile, TransitionPage, Footer, FooterMobile } from "$lib/components/globals/index";
     import { theme, cssFrame } from "$lib/stores/index";
     import "../styles/tailwind.css";
