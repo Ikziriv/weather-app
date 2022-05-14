@@ -57,7 +57,7 @@
     
     onMount(() => {
         // Default to Jakarta at load
-        location = localStorage.getItem("location") || "Jakarta";
+        location = localStorage.getItem("location") || "London";
         weatherData = getWeather();
         if ($fetchLocation === "on") getLocation();
     });

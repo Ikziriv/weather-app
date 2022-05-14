@@ -8,7 +8,6 @@
     <header class="absolute inset-x-0 top-0 md:fixed hidden md:block">
         <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 justify-between items-center w-full h-auto md:h-20 bg-transparent py-4 md:py-0 px-8 md:px-16">
             <div class="flex justify-start items-start">
-                <span class="mr-2 text-gray-500"><Icon icon="bi:heart-fill" class="w-5 h-5 fill-current" /></span>
                 <span class="font-bold text-lg md:text-md">Weathery</span>
             </div>
             <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 justify-end items-center md:items-end">
