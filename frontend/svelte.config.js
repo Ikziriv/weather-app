@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-vercel';
 import preprocess from 'svelte-preprocess';
 import path from "path";
 
@@ -8,18 +8,11 @@ const config = {
     // for more information about preprocessors
     preprocess: preprocess({
         postcss: true,
-        scss: true,
-        preserve: ["ld+json"]
+        scss: true
     }),
 
     kit: {
         adapter: adapter(),
-        prerender: {
-            crawl: true,
-            enabled: true,
-            onError: "fail",
-            entries: ["*"],
-        },
         vite: {
             resolve: {
                 alias: {
@@ -42,8 +35,7 @@ const config = {
             assets: 'static',
             lib: 'src/lib',
             routes: 'src/routes',
-            template: 'src/app.html',
-            hooks: 'src/hooks'
+            template: 'src/app.html'
         },
     }
 };

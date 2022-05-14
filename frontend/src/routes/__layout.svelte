@@ -13,7 +13,7 @@
     import "../styles/tailwind.css";
     import "../styles/bootstrap.css";
     
-	export let key;
+	export let key: any;
 </script>
 
 <div class="main-layout h-auto md:h-screen relative bg-gray-100/50 relative">
@@ -21,7 +21,7 @@
     <TransitionPage refresh={key}>
     <main class={$theme == 'dark' ? 'flex flex-col justify-center items-center w-full h-auto md:h-screen bg-gray-900' : 'flex flex-col justify-center items-center w-full h-auto md:h-screen'}>
         <HeaderMobile />
-            <slot></slot>
+            <slot />
         <FooterMobile />
     </main>
     </TransitionPage>

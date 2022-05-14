@@ -19,7 +19,7 @@
 	}
 </script>
 
-<script lang="ts">
+<script>
     import { onMount } from 'svelte';
     import { fade } from "svelte/transition";
     import { selectTextOnFocus } from "$lib/utils/index";
@@ -33,14 +33,12 @@
     
     export let advice;
 
-    let astro: any;
+    let astro;
     let location = "Fetching Location...";
     let forecastDay = 0;
     let showFav = false;
     let ShowDetail = false;
     let suggestions = [];
-    
-    let weatherData = new Promise(() => {});
 
     async function getSuggestions() {
         // If Input is empty or just spaces, don't show suggestions
@@ -57,6 +55,13 @@
 		}
     }
     
+    onMount(() => {
+        // Default to Jakarta at load
+        location = localStorage.getItem("location") || "Jakarta";
+        weatherData = getWeather();
+        if ($fetchLocation === "on") getLocation();
+    });
+
     function getLocation() {
         location = "Fetching Location...";
         if (navigator.geolocation) {
@@ -72,7 +77,8 @@
     $: {
         if ($fetchLocation === "on") getLocation();
     }
-
+    
+    let weatherData = new Promise(() => {});
     async function getWeather() {
         showFav = false;
         let res = await fetch(`/api/${location}.json`);
@@ -108,19 +114,12 @@
             return forecast;
         }
     }
-
-    onMount(() => {
-        // Default to Jakarta at load
-        location = localStorage.getItem("location") || "Jakarta";
-        weatherData = getWeather();
-        if ($fetchLocation === "on") getLocation();
-    });
 </script>
 
 {#if $cssFrame == 'tailwindcss'}
-<!-- {#await weatherData}
+{#await weatherData}
 <Loading />
-{:then data}  -->
+{:then data}
 <div class="w-full h-auto bg-transparent">
     <div class="grid grid-cols-12 gap-2 w-full h-auto">
         <div class="col-span-full md:col-span-4 border-r relative">
@@ -238,7 +237,7 @@
         </div>
     </div>
 </div>
-<!-- {:catch error}
+{:catch error}
 <ErrorWeather />
-{/await} -->
+{/await}
 {/if}
