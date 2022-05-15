@@ -28,14 +28,6 @@ const config = {
                     '$lib': path.resolve('./src/lib')
                 }
             },
-            build: {},
-            plugins: [],
-        },
-        files: {
-            assets: 'static',
-            lib: 'src/lib',
-            routes: 'src/routes',
-            template: 'src/app.html'
         },
     }
 };

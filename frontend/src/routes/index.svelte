@@ -1,6 +1,7 @@
 <script context="module">
     export async function load() {
         let res;
+
         try {
 		    res = await fetch("https://api.adviceslip.com/advice"); 
         } catch (error) {
@@ -10,7 +11,9 @@
                 }
             }
         }
+
 		const data = await res.json();
+        
 		return {
             props: {
                 advice: data.slip.advice
@@ -81,7 +84,12 @@
     let weatherData = new Promise(() => {});
     async function getWeather() {
         showFav = false;
-        let res = await fetch(`/api/${location}.json`);
+        let res = await fetch(`/api/${location}.json`, {
+                            headers : { 
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json'
+                            }
+                        });
         if (res.ok) {
             const result = await res.json();
             location = result.location.name;

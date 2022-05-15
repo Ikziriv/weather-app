@@ -1,6 +1,6 @@
 <script lang="ts" context="module">
-	import type { ErrorLoad } from '@sveltejs/kit';
-	export const load: ErrorLoad = ({
+	/** @type {import('@sveltejs/kit').Load} */
+	export const load = ({
 		error,
 		status,
 	}): {
@@ -33,10 +33,12 @@
 	// End: Exported Properties
 </script>
 <!-- Start: Header Tage -->
-
+<svelte:head>
+	<title>{status}</title>
+</svelte:head>
 <!-- End: Header Tage -->
 <!-- Start: Error View Layout -->
-<section class="flex items-center h-full pt-56 md:pt-32 dark:bg-gray-900 dark:text-gray-100">
+<section class="flex items-center w-full h-full pt-56 md:pt-32 dark:bg-gray-900 dark:text-gray-100">
 	<div class="container flex flex-col items-center justify-center px-5 mx-auto my-12 md:my-24">
 		<div class="max-w-md text-center">
 			<h2 class="mb-8 font-extrabold text-9xl dark:text-gray-600">
