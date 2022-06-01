@@ -2,7 +2,7 @@
     "private": true,
     "description": "Project challange",
     "scripts": {
-        "build": "turbo run build",
+        "build": "turbo run build --output public",
         "dev": "turbo run dev --parallel",
         "lint": "turbo run lint"
     },
