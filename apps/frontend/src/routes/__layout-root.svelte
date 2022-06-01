@@ -18,7 +18,7 @@
 	export let key: any;
 </script>
 
-<div class="main-layout h-auto md:h-screen relative bg-gray-100/50 relative">
+<div class="main-layout h-auto md:h-screenbg-gray-100/50 relative">
     <Header /> 
     <TransitionPage refresh={key}>
     <main class={$theme == 'dark' ? 'flex flex-col justify-center items-center w-full h-auto md:h-screen bg-gray-900' : 'flex flex-col justify-center items-center w-full h-auto md:h-screen'}>

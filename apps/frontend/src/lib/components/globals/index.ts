@@ -20,3 +20,6 @@ from './card/MainCard.svelte'
 
 export { default as ErrorWeather }
 from './notif/ErrorWeather.svelte'
+
+export { default as Alert }
+from './alert/Alert.svelte'

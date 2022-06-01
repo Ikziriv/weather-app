@@ -4,7 +4,8 @@
     "scripts": {
         "build": "turbo run build --output public",
         "dev": "turbo run dev --parallel",
-        "lint": "turbo run lint"
+        "lint": "turbo run lint",
+        "test": "turbo test"
     },
     "workspaces": [
         "apps/*",

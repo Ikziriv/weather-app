@@ -1,5 +1,5 @@
 module.exports = {
-    content: ['./src/**/*.{html,js,svelte,ts}'],
+    content: ['app.html', './src/**/*.{html,js,svelte,ts}'],
     theme: {
         screens: {
             'sm': '360px',
