@@ -1,10 +1,15 @@
 {
-    "name": "weather-app",
-    "version": "1.0.0",
+    "private": true,
     "description": "Project challange",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "turbo run build",
+        "dev": "turbo run dev --parallel",
+        "lint": "turbo run lint"
     },
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Ikziriv/weather-app.git"
@@ -17,7 +22,8 @@
         "bootstrap",
         "html",
         "css",
-        "javascript"
+        "javascript",
+        "turborepo"
     ],
     "author": "Ikziriv",
     "license": "ISC",
@@ -25,8 +31,10 @@
         "url": "https://github.com/Ikziriv/weather-app/issues"
     },
     "homepage": "https://github.com/Ikziriv/weather-app#readme",
-    "dependencies": {
-        "svelte": "^3.48.0",
-        "sveltestrap": "^5.9.0"
-    }
+    "devDependencies": {
+        "turbo": "latest",
+        "prettier": "^2.4.1",
+        "eslint": "7.32.0"
+    },
+    "type": "module"
 }
