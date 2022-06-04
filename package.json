@@ -33,9 +33,9 @@
     },
     "homepage": "https://github.com/Ikziriv/weather-app#readme",
     "devDependencies": {
-        "turbo": "latest",
-        "prettier": "^2.4.1",
-        "eslint": "7.32.0"
+        "eslint": "7.32.0",
+        "prettier": "^2.6.2",
+        "turbo": "latest"
     },
     "type": "module"
 }
